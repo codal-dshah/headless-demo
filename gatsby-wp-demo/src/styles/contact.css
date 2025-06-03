@@ -1,0 +1,213 @@
+.contact-page {
+  padding: 60px 20px;
+  background: var(--secondary-bg);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: var(--text-color);
+}
+
+.contact-page h1 {
+  text-align: center;
+  font-size: 2.75rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.contact-page h2 {
+  text-align: center;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  margin-top: 20px;
+  color: var(--text-color);
+  border: 1px solid var(--primary-color);
+}
+
+.wp-block-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.wp-block-column {
+  flex: 1;
+  min-width: 280px;
+}
+
+.wp-block-column p {
+  color: var(--text-color);
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+.wp-block-column a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.wp-block-column a:hover {
+  text-decoration: underline;
+}
+
+.wp-block-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Contact Form 7 Styles */
+.wpcf7-form p {
+  margin-bottom: 20px;
+}
+
+.wpcf7-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 6px;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--white);
+  color: var(--text-color);
+  transition: border-color 0.3s ease, box-shadow 0.3s;
+}
+
+.wpcf7-form input[type="text"]:focus,
+.wpcf7-form input[type="email"]:focus,
+.wpcf7-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.2);
+}
+
+.wpcf7-form textarea {
+  resize: vertical;
+  min-height: 160px;
+}
+
+.wpcf7-submit {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 14px 24px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.wpcf7-submit:hover {
+  background: #e69500;
+}
+.styled-contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgb(141 37 37 / 200%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-family: var(--font-family);
+  color: var(--text-color);
+}
+
+.styled-contact-form input,
+.styled-contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: var(--white);
+  color: var(--text-color);
+}
+
+.styled-contact-form input:focus,
+.styled-contact-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.2);
+}
+
+.styled-contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.styled-contact-form button[type="submit"] {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.styled-contact-form button[type="submit"]:hover {
+  background-color: #e69500;
+  transform: translateY(-2px);
+}
+
+.form-response {
+  font-size: 0.95rem;
+  color: #28a745;
+}
+
+.styled-contact-form p {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 1px;
+}
+
+p:empty {
+  height: 0;
+  display: none;
+}
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+  .contact-page h2 {
+    text-align: left;
+  }
+  .contact-form {
+    padding: 25px 20px;
+  }
+
+  .wp-block-columns {
+    flex-direction: column;
+  }
+  .styled-contact-form {
+    margin: 0px;
+  }
+}
