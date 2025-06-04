@@ -1,27 +1,30 @@
 # Ignore everything
 *
 
-# Allow root-level files and folders that we want
+# Allow specific folders at root
 !.gitignore
 !README.md
-!gatsby-wp-demo/
-!wp-content/
 !.github/
+!.github/**
+!wp-content/
+!wp-content/plugins/
+!wp-content/plugins/custom-gutenberg-block/
+!wp-content/plugins/custom-gutenberg-block/**
+!wp-content/themes/
+!wp-content/themes/twentytwentyfive/
+!wp-content/themes/twentytwentyfive/**
 
-# Allow workflows
-!.github/workflows/
-
-# Allow contents of gatsby-wp-demo
+# Allow Gatsby folder
+!gatsby-wp-demo/
 !gatsby-wp-demo/**
 !gatsby-wp-demo/node_modules/
 !gatsby-wp-demo/public/
 
-# Ignore all plugins and themes
+# Ignore everything else in plugins/themes not explicitly included
 wp-content/plugins/*
-wp-content/themes/*
-
-# Allow only specific plugin and theme
 !wp-content/plugins/custom-gutenberg-block/
-!wp-content/plugins/custom-gutenberg-block/**
+wp-content/themes/*
 !wp-content/themes/twentytwentyfive/
-!wp-content/themes/twentytwentyfive/**
+
+# Global ignores
+node_modules/
