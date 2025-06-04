@@ -30,9 +30,13 @@ Make sure you have the following installed:
 
 1. **Download & Install WordPress** in the project root or any directory.
 2. **Activate Required Plugins**:
-    - [WPGraphQL](https://github.com/wp-graphql/wp-graphql)
-    - [WPGraphQL Gutenberg](https://github.com/wp-graphql/wp-graphql-gutenberg)
-    - `custom-gutenberg-block` (included)
+
+    - Advanced Custom Fields
+    - WP Gatsby
+    - WPForms Lite
+    - WPGraphQL
+    - WPGraphQL for ACF
+
 3. **Activate the Theme**:
     - `twentytwentyfive` (included)
 4. **Visit GraphQL Endpoint**:
