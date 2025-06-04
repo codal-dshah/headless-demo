@@ -1,0 +1,70 @@
+.blog-page {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.blog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.blog-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+  text-align: left;
+  color: var(--text-color);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--heading-color);
+}
+
+.blog-card a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.blog-card a:hover {
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.blog-detail {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.blog-detail a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.blog-detail a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.featured-image {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border: 1px solid var(--card-border);
+}

@@ -1,0 +1,237 @@
+.testimonial-slider {
+  position: relative;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: transparent;
+  overflow: hidden;
+}
+
+.testimonial-item {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 4px 20px var(--shadow);
+  margin-bottom: 2rem;
+  border: 1px solid var(--primary-color);
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.testimonial-content img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(255, 165, 0, 0.1);
+}
+
+.testimonial-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 0.4rem;
+}
+
+.testimonial-quote {
+  font-size: 1rem;
+  color: var(--subtext-color);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 1.2rem;
+  margin: 0px;
+}
+
+.testimonial-quote::before {
+  content: '“';
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.testimonial-quote::after {
+  content: '”';
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-left: 6px;
+  position: relative;
+  top: 3px;
+}
+
+/* Arrow Controls */
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--card-bg);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.custom-arrow:hover {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.prev-arrow {
+  left: -20px;
+}
+
+.next-arrow {
+  right: -20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .testimonial-content {
+    flex-direction: column;
+  }
+
+  .custom-arrow {
+    display: none;
+  }
+  
+}
+
+.custom-arrow:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 165, 0, 0.4);
+}
+
+.slick-prev.custom-arrow {
+  left: -70px;
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.slick-next.custom-arrow {
+  right: -70px;
+  animation: slideInRight 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    left: -90px;
+  }
+  to {
+    opacity: 1;
+    left: -70px;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    right: -90px;
+  }
+  to {
+    opacity: 1;
+    right: -70px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-item,
+  .testimonial-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .custom-arrow {
+    display: none !important;
+  }
+}
+
+/* ---------- Feature Grid ---------- */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+  padding: 10px;
+  max-width: 1000px;
+  position: relative;
+  margin: 1rem auto;
+}
+
+.feature-item {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px var(--shadow);
+  transition: all 0.3s ease-in-out;
+  transform: translateY(0);
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards;
+  border: 1px solid var(--primary-color);
+}
+
+
+.feature-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px var(--shadow-hover);
+  background-color: var(--bg-color);
+}
+
+.feature-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.feature-item p {
+  color: var(--subtext-color);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* Entry Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
