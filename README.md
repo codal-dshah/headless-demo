@@ -1,27 +1,27 @@
 # Headless WordPress + Gatsby Setup
 
-This project demonstrates a Headless CMS architecture using **WordPress** as the backend and **Gatsby** as the frontend. WordPress manages the content, and Gatsby builds a blazing-fast static site using data from the WordPress GraphQL API.
+This project demonstrates a Headless CMS architecture using **WordPress** as the backend and **Gatsby** as the frontend. WordPress manages the content, and Gatsby builds a static site using data from the WordPress GraphQL API with light dark mode functionality.
 
 ---
 
 ## Tech Stack
 
--   **WordPress** (CMS + WPGraphQL API)
--   **GatsbyJS** (React-based static site generator)
--   **WPGraphQL** (for exposing WP data)
--   **gatsby-source-wordpress** (for sourcing GraphQL data in Gatsby)
+-   **WordPress**
+-   **GatsbyJS**
+-   **WPGraphQL**
+-   **gatsby-source-wordpress**
 
 ---
 
 ---
 
-## 🔧 Prerequisites
+## Prerequisites
 
 Make sure you have the following installed:
 
 -   [Node.js](https://nodejs.org/) (v18+ recommended)
 -   [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/)
--   PHP 7.4+ and MySQL (via [LocalWP](https://localwp.com/), XAMPP, or MAMP)
+-   PHP 7.4+ and MySQL via XAMPP
 -   WordPress (latest)
 
 ---
@@ -37,7 +37,7 @@ Make sure you have the following installed:
     - `twentytwentyfive` (included)
 4. **Visit GraphQL Endpoint**:
     ```
-    http://localhost/your-wp-site/graphql
+    http://localhost/headless-demo/graphql
     ```
 
 ---
@@ -63,7 +63,7 @@ Make sure you have the following installed:
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `http://localhost/your-wp-site/graphql`, // update to match your WP install
+        url: `http://localhost/headless-demo/graphql`, // update to match your WP install
       },
     }
     ```
@@ -75,8 +75,8 @@ Make sure you have the following installed:
     ```
 
     Then visit:  
-    👉 `http://localhost:8000` for the site  
-    👉 `http://localhost:8000/___graphql` for the Gatsby GraphQL Explorer
+    `http://localhost:8000` for the site  
+    `http://localhost:8000/___graphql` for the Gatsby GraphQL Explorer
 
 ---
 
