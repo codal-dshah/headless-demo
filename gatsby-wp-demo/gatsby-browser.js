@@ -19,16 +19,6 @@ const ThemeProvider = ({ children }) => {
     if (localTheme) {
       setTheme(localTheme)
       document.documentElement.setAttribute("data-theme", localTheme)
-    } else {
-      fetch("http://localhost/headless-demo/wp-json/gatsby/v1/theme-settings")
-        .then((res) => res.json())
-        .then((result) => {
-          const fetchedTheme = result.enable_dark_mode ? "dark" : "light"
-          setTheme(fetchedTheme)
-          document.documentElement.setAttribute("data-theme", fetchedTheme)
-          localStorage.setItem("site-theme", fetchedTheme)
-        })
-        .catch((err) => console.error("Theme fetch failed:", err))
     }
   }, [])
 
