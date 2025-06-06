@@ -6,13 +6,15 @@
 !README.md
 !.github/
 !.github/**
+
+#themes and plugin folder allow
 !wp-content/
 !wp-content/plugins/
 !wp-content/plugins/custom-gutenberg-block/
 !wp-content/plugins/custom-gutenberg-block/**
 !wp-content/themes/
-!wp-content/themes/twentytwentyfive/
-!wp-content/themes/twentytwentyfive/**
+!wp-content/themes/headless-wp/
+!wp-content/themes/headless-wp/**
 
 # Allow Gatsby folder
 !gatsby-wp-demo/
@@ -24,7 +26,7 @@
 wp-content/plugins/*
 !wp-content/plugins/custom-gutenberg-block/
 wp-content/themes/*
-!wp-content/themes/twentytwentyfive/
+!wp-content/themes/headless-wp/
 
 # Global ignores
 node_modules/
